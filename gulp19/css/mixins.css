@@ -1,0 +1,31 @@
+//Assigns flex and helps organize content with flexbox
+@mixin displayFlex($flex-flow, $justify-content) {
+  display: flex;
+  flex-flow: $flex-flow;
+  justify-content: $justify-content;
+}
+
+//Creates grid
+@mixin grid($grid-template-columns) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+//Puts content in certain grid and column
+@mixin grid-id($row, $col) {
+    grid-row: $row;
+    grid-column: $col;
+}
+
+//Sets margin and padding to 0
+@mixin zeroMarPad {
+    margin: 0;
+    padding: 0;
+}
+
+//Sets repeating values to respective numbers
+@mixin maxMarginPadding {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: $padding;
